@@ -29,6 +29,7 @@ struct Solution{
     //Faz uma troca no vetor solução
     void swap_solution(int& a, int& b);
 
+
 	//Alocação escolhida
 	std::vector<int> solution;
 	//custo
@@ -57,7 +58,7 @@ class Qap{
 
 		void improvement(Solution& current);
 
-	private:
+		int n;
 		Matrix dist;
 		Matrix flow;
 		Solution best_solution;

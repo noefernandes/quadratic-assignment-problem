@@ -7,9 +7,8 @@ class Backtracking
 {
 public:
 	Backtracking(){};
-	~Backtracking();
 	
-	Solution solve(Qap qap);
+	void solve(Qap qap);
 };
 
 #endif

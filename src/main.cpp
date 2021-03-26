@@ -9,6 +9,8 @@ int main(int argc, char *argv[]){
 	std::string solution = argv[2];
 	qap.read_instance("data/" + instance, "data/" + solution);
 
-	qap.grasp();
+	//qap.grasp();
 	backtracking.solve(qap);
+
+	return 0;
 }

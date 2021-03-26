@@ -105,6 +105,7 @@ void Qap::read_instance(std::string instance_name, std::string solution_name){
 	file.open(instance_name.c_str());
 
 	file >> n;
+	this->n = n;
 	
 	dist.resize(n);
 	flow.resize(n);
