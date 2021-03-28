@@ -50,6 +50,7 @@ void resolve_qap(int graph[][V], int flow[][V], vector<bool>& v, int currPos,
             // Marcando como visitado
             v[i] = true;
             solution.push_back(i);
+
             resolve_qap(graph, flow, v, i, n, count + 1,
                 cost + graph[currPos][i] * flow[currPos][i], ans);
   
@@ -90,7 +91,7 @@ void Backtracking::solve(Qap qap){
   	solution.push_back(0);
 
     resolve_qap(graph, flow, v, 0, n, 1, 0, ans);
-  		
+	
     best_solution.push_back(0);
   	
   	cout << "reposta: ";
@@ -99,5 +100,6 @@ void Backtracking::solve(Qap qap){
   	}
     
     cout << "\ncusto: " << ans << "\n";
-  
+
+
 }
