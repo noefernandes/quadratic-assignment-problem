@@ -9,6 +9,7 @@ public:
 	Backtracking(){};
 	
 	void solve(Qap qap);
+	void run_experiments(Qap qap);
 };
 
 #endif

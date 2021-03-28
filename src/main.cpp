@@ -10,7 +10,7 @@ int main(int argc, char *argv[]){
 	qap.read_instance("data/" + instance, "data/" + solution);
 
 	//qap.grasp();
-	backtracking.solve(qap);
+	backtracking.run_experiments(qap);
 
 	return 0;
 }

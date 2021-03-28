@@ -1,10 +1,14 @@
 #include "backtracking.h"
 #include <bits/stdc++.h>
+#include<chrono>
+#include <algorithm>
 using namespace std;
 #define V 12
 
 static vector<int> solution;
 static vector<int> best_solution;
+using namespace std::chrono;
+int global_cost;
 
 
 
@@ -94,12 +98,36 @@ void Backtracking::solve(Qap qap){
 	
     best_solution.push_back(0);
   	
-  	cout << "reposta: ";
-  	for(int i = 0; i < n; i++){
-  		cout << best_solution[i] << " ";
-  	}
-    
-    cout << "\ncusto: " << ans << "\n";
+    global_cost = ans;
 
+
+}
+
+void Backtracking::run_experiments(Qap qap){
+    vector<double> v_tempo;
+    double media = 0.0;
+
+    for (int i = 0; i < 30; i++)
+    {
+        auto start = high_resolution_clock::now();
+        solve(qap);
+        auto end = high_resolution_clock::now();
+
+        auto tempo = duration_cast<microseconds>(end-start);
+        media += tempo.count();
+        v_tempo.push_back(tempo.count());
+    }
+
+
+    cout << "Tempo médio: "<< media/30;
+    cout << "\nMenor tempo encontrado: " << *min_element(
+        v_tempo.begin(),v_tempo.end());
+    cout << "\nMaior tempo encontrado: " << *max_element(
+        v_tempo.begin(),v_tempo.end());
+    cout << "\nCusto encontrado: "<< global_cost;
+    cout << "\nSolução encontrada: ";
+    for(int i = 0; i < 12; i++){
+        cout << best_solution[i] << " ";
+    }
 
 }
