@@ -16,7 +16,7 @@ Matrix flow;
 };*/
 
 
-void tsp(Matrix graph, Matrix flow, vector<bool>& v, int currPos,
+void backtracing_solve(Matrix graph, Matrix flow, vector<bool>& v, int currPos,
          int n, int count, int cost, int& ans){
 
     if (count == n && graph[currPos][0]) {
@@ -46,7 +46,7 @@ void tsp(Matrix graph, Matrix flow, vector<bool>& v, int currPos,
             // Mark as visited
             v[i] = true;
             solution.push_back(i);
-            tsp(graph, flow, v, i, n, count + 1,
+            backtracing_solve(graph, flow, v, i, n, count + 1,
                 cost + graph[currPos][i] * flow[currPos][i], ans);
   
             // Mark ith node as unvisited
@@ -83,14 +83,13 @@ void Backtracking::solve(Qap qap){
   	solution.push_back(0);
 
 
-    // Find the minimum weight Hamiltonian Cycle
-    tsp(graph, flow, v, 0, n, 1, 0, ans);
+    backtracing_solve(graph, flow, v, 0, n, 1, 0, ans);
   		
     best_solution.push_back(0);
   	for(int i = 0; i < best_solution.size(); i++){
   		cout << best_solution[i] << " ";
   	}
-    // ans is the minimum weight Hamiltonian Cycle
+
     cout << "\n" << ans;
   
 }
