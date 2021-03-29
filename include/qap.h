@@ -45,23 +45,19 @@ class Qap{
 	public:
 		Qap();
 
-		void read_instance(std::string instance_name, std::string solution_name);
+		void read_instance(std::string instance_string);
 		int get_inst_size();
 		int get_obj_qtd();
 		Matrix& get_dist_matrix();
 		Matrix& get_flow_matrix();
-		void best_neighbor(Solution& curr_solution);
-		Solution local_search(Solution& curr_solution);
-		int evaluate_move(int a, int b);
-		Solution constructive_phase();
-		Solution grasp();
-
-		void improvement(Solution& current);
 
 		int n;
+		std::vector<int> known_best_solution;
+		int known_best_cost;
 		Matrix dist;
 		Matrix flow;
 		Solution best_solution;
+		std::string instance_string;
 };
 
 #endif

@@ -1,0 +1,9 @@
+Instância: rou12
+Custo ótimo já conhecido 235528
+Melhor solução já conhecida: 6 5 11 9 2 8 3 1 12 7 4 10 
+Tempo médio: 35.1667 segundos
+Menor tempo encontrado: 35 segundos
+Maior tempo encontrado: 37 segundos
+Custo encontrado: 235528
+Solução encontrada: 5 4 10 8 1 7 2 0 11 6 3 9 
+=======================================================

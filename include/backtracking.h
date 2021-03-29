@@ -8,7 +8,7 @@ class Backtracking
 public:
 	Backtracking(){};
 	
-	void solve(Qap qap);
+	void solve();
 	void run_experiments(Qap qap);
 };
 
