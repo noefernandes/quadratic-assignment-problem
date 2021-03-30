@@ -11,12 +11,12 @@ int main(){
 
 	switch(choice){
 		case 1:{
-			std::vector<std::string> instances {"rou12", "had12", "esc16a","bur26a"};
-			
+			std::vector<std::string> instances {"had12", "chr12a","scr12"};
+			//std::vector<std::string> instances {"esc16a","bur26a"};
+
 			for (int i = 0; i < instances.size(); i++){
 				Qap qap;
 				Backtracking backtracking;
-				cout<< instances[i];
 				qap.read_instance(instances[i]);
 
 				//qap.grasp();

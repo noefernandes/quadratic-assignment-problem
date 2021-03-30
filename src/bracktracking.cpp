@@ -39,7 +39,7 @@ void resolve_qap(int current_cost, int current_solution_size, vector<int>& curre
                     already_in_solution[i] = true;
 
                     
-                    //Calculando o cálculo do novo custo
+                    //Calculando o acrescimo do novo custo
                     int cost_increase = 0;
                     for(int j = 0; j < current_solution_size; j++){
                         cost_increase += qap_instance.dist[j][current_solution_size]* qap_instance.flow[current_solution[j]][i]

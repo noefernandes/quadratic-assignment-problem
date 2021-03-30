@@ -7,3 +7,49 @@ Maior tempo encontrado: 37 segundos
 Custo encontrado: 235528
 Solução encontrada: 5 4 10 8 1 7 2 0 11 6 3 9 
 =======================================================
+Instância: had12
+Custo ótimo já conhecido 1652
+Melhor solução já conhecida: 3 10 11 2 12 5 6 7 8 1 4 9 
+Tempo médio: 35.1333 segundos
+Menor tempo encontrado: 35 segundos
+Maior tempo encontrado: 37 segundos
+Custo encontrado: 1652
+Solução encontrada: 2 9 10 1 11 4 5 6 7 0 3 8 
+=======================================================
+
+Instância: had12
+Custo ótimo já conhecido 1652
+Melhor solução já conhecida: 3 10 11 2 12 5 6 7 8 1 4 9 
+Tempo médio: 37 segundos
+Menor tempo encontrado: 37 segundos
+Maior tempo encontrado: 37 segundos
+Custo encontrado: 1652
+Solução encontrada: 2 9 10 1 11 4 5 6 7 0 3 8 
+=======================================================
+Instância: chr12a
+Custo ótimo já conhecido 9552
+Melhor solução já conhecida: 7 5 12 2 1 3 9 11 10 6 8 4 
+Tempo médio: 37 segundos
+Menor tempo encontrado: 37 segundos
+Maior tempo encontrado: 37 segundos
+Custo encontrado: 9552
+Solução encontrada: 6 4 11 1 0 2 8 10 9 5 7 3 
+=======================================================
+Instância: scr12
+Custo ótimo já conhecido 31410
+Melhor solução já conhecida: 8 6 3 2 10 1 5 9 4 7 12 11 
+Tempo médio: 37 segundos
+Menor tempo encontrado: 37 segundos
+Maior tempo encontrado: 37 segundos
+Custo encontrado: 31410
+Solução encontrada: 1 6 9 10 2 11 7 3 8 5 0 4 
+=======================================================
+Instância: tai10a
+Custo ótimo já conhecido 31410
+Melhor solução já conhecida: 0 0 0 0 0 0 0 0 0 0 
+Tempo médio: 0 segundos
+Menor tempo encontrado: 0 segundos
+Maior tempo encontrado: 0 segundos
+Custo encontrado: 135028
+Solução encontrada: 8 0 7 5 9 4 3 2 6 1 
+=======================================================
