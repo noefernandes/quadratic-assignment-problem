@@ -29,7 +29,7 @@ struct Solution{
     //Faz uma troca no vetor solução
     void swap_solution(int& a, int& b);
 
-
+    int size;
 	//Alocação escolhida
 	std::vector<int> solution;
 	//custo

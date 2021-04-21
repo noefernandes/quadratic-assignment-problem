@@ -9,8 +9,8 @@ Solution::Solution(){}
 Solution::Solution(Matrix& dist, Matrix& flow){
 	this->dist = dist;
 	this->flow = flow;
-
-	for(int i(0); i < n; i++){
+	this->size = dist.size();
+	for(int i(0); i < this->size; i++){
 		this->solution.push_back(i + 1);
 	}
 
@@ -18,8 +18,8 @@ Solution::Solution(Matrix& dist, Matrix& flow){
 
 	shuffle(this->solution.begin(), this->solution.end(), std::default_random_engine(seed));
 
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < n; j++){
+	for(int i = 0; i < this->size; i++){
+		for(int j = 0; j < this->size; j++){
 			cost += this->flow[this->solution[i]-1][this->solution[j]-1] * this->dist[i][j];
 		}
 	}
@@ -30,16 +30,22 @@ Solution::Solution(Matrix& dist, Matrix& flow){
 Solution::Solution(Matrix& dist, Matrix& flow, std::vector<int> aux){
 	this->dist = dist;
 	this->flow = flow;
-	this->solution.reserve(n);
+	this->solution.reserve(solution.size());
 	this->solution = aux;
+
+	this->size = solution.size();
 	
 	int cost = 0;
 
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < n; j++){
+
+
+	for(int i = 0; i < this->size; i++){
+		for(int j = 0; j < this->size; j++){
 			cost += this->flow[this->solution[i]-1][this->solution[j]-1] * this->dist[i][j];
+
 		}
 	}
+
 	
 	this->cost = cost;
 }
@@ -78,8 +84,8 @@ void Solution::swap_solution(int& a, int& b){
 
 	int cost = 0;
 
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < n; j++){
+	for(int i = 0; i < this->size; i++){
+		for(int j = 0; j < this->size; j++){
 			cost += this->flow[this->solution[i]-1][this->solution[j]-1] * this->dist[i][j];
 		}
 	}

@@ -1,5 +1,5 @@
-build/main.o: src/main.cpp include/backtracking.h include/qap.h
+build/main.o: src/main.cpp include/IterativeLSPR.h include/qap.h
 
-include/backtracking.h:
+include/IterativeLSPR.h:
 
 include/qap.h:
